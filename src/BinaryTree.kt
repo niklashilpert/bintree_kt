@@ -23,6 +23,12 @@ class BinaryTree<T: Comparable<T>> : Iterable<T>{
         }
     }
 
+    fun insertAll(vararg items: T) {
+        for (item in items) {
+            insert(item)
+        }
+    }
+
     override fun iterator(): Iterator<T> {
         return BinaryTreeIterator(root)
     }
